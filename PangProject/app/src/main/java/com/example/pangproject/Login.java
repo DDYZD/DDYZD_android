@@ -51,7 +51,7 @@ public class Login extends AppCompatActivity {
         TextView question = (TextView) findViewById(R.id.question); //문구
         final Button signed = (Button) findViewById(R.id.signed);// 회원가입 창
 
-        final String BASE_URL = "http://10.156.147.146/";
+
 
 
         login.setOnClickListener(new View.OnClickListener() {
@@ -59,10 +59,11 @@ public class Login extends AppCompatActivity {
                 boolean isRight = false;
                 String idapi = id1.getText().toString();
                 String psapi = passward.getText().toString();
-                CallApi.responsetId = idapi;
-                CallApi.respnsePassward = psapi;
+                CallApi.requestId = idapi;
+                CallApi.requestPassward = psapi;
 
                 //Retrofit 호출
+
                 Model__CheckAlready modelCheckAlready = new Model__CheckAlready(phoneNumber);
                 Call<Model__CheckAlready> call = RetrofitClient.getApiService().postOverlapCheck(modelCheckAlready);
                 call.enqueue(new Callback<Model__CheckAlready>() {
@@ -91,8 +92,8 @@ public class Login extends AppCompatActivity {
             }
             @Override
             public void onClick(View view) {
-                int a= Model__CheckAlready.requestId;
-                String b = Model__CheckAlready.requestPassward;
+                int a= Model__CheckAlready.responseId;
+                String b = Model__CheckAlready.responsePassward;
 
                 System.out.println("aaaaaaaaaaaaaaaaaa" + a);
                 if (a == 200) {

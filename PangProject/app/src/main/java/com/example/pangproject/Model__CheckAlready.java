@@ -4,33 +4,33 @@ import retrofit2.Call;
 
 // 보내는 값
 class CallApi {
-        static String responsetId="sss";
-        static String respnsePassward="1111";
+        static String requestId;
+        static String requestPassward;
 
         public void CallApi(String responceId) {
-            this.responsetId = responceId;
+            this.requestId = responceId;
         }
 
         public String getRequestId() {
-            return responsetId;
+            return requestId;
         }
 
         public void setRequestId(String i) {
-            this.responsetId = responsetId;
+            this.requestId = requestId;
         }
 
         public String getRequestPassward() {
-            return respnsePassward;
+            return requestPassward;
         }
 
         public void setRequestPassward() {
-            this.respnsePassward = respnsePassward;
+            this.requestPassward = requestPassward;
         }
 
         public String toString() {
             return "RepoCheckAlready{" +
-                    "id: <"+ responsetId + ">," +
-                    "\n passward: <" + respnsePassward + ">" +
+                    "id: <"+ requestId + ">," +
+                    "\n passward: <" + requestPassward + ">" +
                     '}';
         }
 
@@ -47,33 +47,33 @@ class CallApi {
 
 // 받는 값
 public class Model__CheckAlready {
-    static int requestId;
-    static String requestPassward;
+    static int responseId;
+    static String responsePassward;
 
     public Model__CheckAlready(int responceId) {
-        this.requestId = responceId;
+        this.responseId = responceId;
     }
 
     public int getRequestId() {
-        return requestId;
+        return responseId;
     }
 
     public void setRequestId(int i) {
-        this.requestId = requestId;
+        this.responseId = responseId;
     }
 
     public String getRequestPassward() {
-        return requestPassward;
+        return responsePassward;
     }
 
     public void setRequestPassward() {
-        this.requestPassward = requestPassward;
+        this.responsePassward = responsePassward;
     }
 
     public String toString() {
         return "RepoCheckAlready{" +
-                "id: <" + requestId + ">," +
-                "\n passward: <" + requestPassward + ">" +
+                "id: <" + responseId + ">," +
+                "\n passward: <" + responsePassward + ">" +
                 '}';
     }
 
