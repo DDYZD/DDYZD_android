@@ -19,6 +19,5 @@ import retrofit2.http.Query;
 
 public interface RetrofitAPI {
     @POST("login")
-
-    Call<CallApi> postOverlapCheck(@Body Model__CheckAlready modelCheckAlready);
+    Call<Model__CheckAlready> postOverlapCheck(@Body CallApi modelCheckAlready);
 }

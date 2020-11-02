@@ -1,4 +1,4 @@
-/*
+
 package com.example.pangproject;
 
 import com.google.gson.annotations.SerializedName;
@@ -9,4 +9,4 @@ public class PostResult {
 
 
 }
-*/
+

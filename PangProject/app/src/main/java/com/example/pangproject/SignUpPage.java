@@ -55,7 +55,6 @@ public class SignUpPage extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             //Toast.makeText(getApplicationContext(),"확인", Toast.LENGTH_LONG).show();
-
                         }
                     });
                     oh.setCancelable(false);
